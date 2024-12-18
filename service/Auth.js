@@ -8,7 +8,6 @@ const usuario1 = new Usuario(
     'password123',
     'Juan',
     'Perez',
-    'Calle 123, Ciudad',
     '3145386174',
 );
 
@@ -18,7 +17,6 @@ const usuario2 = new Usuario(
     'password1234',
     'Juancho',
     'Pereira',
-    'Calle 5, Ciudad',
     '3015517609',
 );
 

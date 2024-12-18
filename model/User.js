@@ -5,10 +5,9 @@ export class Usuario {
       this.contrasena = contrasena;
       this.nombre = nombre;
       this.apellido = apellido;
-      this.direccion = direccion;
       this.telefono = telefono;
     }
-  
+
     
   }
   
