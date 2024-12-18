@@ -1,5 +1,5 @@
-  /* Reset básico */
-  * {
+/* Reset básico */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -9,7 +9,7 @@
 .background-container {
     position: relative;
     height: 100vh;
-    background: url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
+    background: url('../img/fondo\ monedas.jpg') no-repeat center center/cover;
     color: white;
     text-align: center;
     overflow: hidden;
@@ -27,30 +27,19 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px 30px;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgb(255, 255, 255);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 12px;
     z-index: 10;
 }
 
 .navbar img {
-    height: 40px;
-}
-
-.navbar .menu {
-    display: flex;
-    gap: 20px;
-}
-
-.navbar .menu a {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
+    height: 50px;
 }
 
 .navbar .button {
-    background-color: #007BFF;
-    color: white;
+    background-color: #ffef0a;
+    color: rgb(0, 0, 0);
     padding: 8px 15px;
     text-decoration: none;
     border-radius: 5px;
@@ -64,56 +53,69 @@
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    background: rgba(0, 0, 0, 0.205); /* Fondo oscuro translúcido */
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 800px;
 }
 
 .content h1 {
     font-size: 2.5em;
     margin-bottom: 10px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Sombra para resaltar */
 }
 
 .content p {
-    font-size: 1em;
+    font-size: 1.1em;
     margin-bottom: 20px;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
 
 .content .register-button {
-    background-color: #FF3366;
-    color: white;
+    background-color: #dfad25;
+    color: rgb(0, 0, 0);
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* Nueva sección debajo */
+
 .section {
     display: flex;
-    justify-content: center;
+    justify-content: space-between; 
     align-items: center;
-    padding: 40px 20px;
+    padding: 40px 60px; 
     background-color: #F5F5F5;
     margin-top: 20px;
+    max-width: 1200px; 
+    margin-left: auto; 
+    margin-right: auto;
 }
 
 .section .text {
     flex: 1;
-    max-width: 50%;
-    padding-right: 20px;
+    max-width: 40%; 
     font-size: 1.1em;
-    line-height: 1.5;
+    line-height: 1.4; 
     color: #333;
+    margin-right: 20px; 
 }
 
 .section .image {
     flex: 1;
-    max-width: 50%;
+    max-width: 40%; 
     display: flex;
     justify-content: center;
 }
 
 .section .image img {
-    width: 100%;
-    max-width: 300px;
+    width: 100%; 
+    max-width: 400px; 
     border-radius: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
