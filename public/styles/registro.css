@@ -1,0 +1,89 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Contenedor principal */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    padding: 0 10%;
+    background-color: #F5F5F5;
+}
+
+/* Imagen flotante */
+.image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Formulario de registro */
+.register-form {
+    flex: 1;
+    max-width: 40%;
+    padding: 30px;
+}
+
+.register-form h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.register-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1em;
+    color: #555;
+}
+
+.register-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.register-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28A745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+.register-form button:hover {
+    background-color: #218838;
+}
+
+.register-form a {
+    display: block;
+    margin-top: 15px;
+    text-align: center;
+    color: #007BFF;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+.register-form a:hover {
+    text-decoration: underline;
+}
