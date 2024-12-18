@@ -1,4 +1,4 @@
-import { Usuario } from "../model/User";
+import { Usuario } from "../model/User.js";
 
 let listaUsers = [];
 
@@ -25,20 +25,24 @@ const usuario2 = new Usuario(
 listaUsers.push(usuario1);
 listaUsers.push(usuario2);
 
-const correoIngresado = prompt("Ingrese su correo:");
-const passwordIngresada = prompt("Ingrese su contraseña:");
+const loginButton = document.getElementById("login-button");
 
-const usuarioEncontrado = listaUsers.find((user) => user.correo === correoIngresado);
+loginButton.addEventListener("click", (event) => {
+    const emailInput = document.getElementById("email").value;
+    const passwordInput = document.getElementById("password").value;
 
-if (usuarioEncontrado) {
-  if (usuarioEncontrado.contrasena === passwordIngresada) {
-    alert(`¡Bienvenido, ${usuarioEncontrado.nombre} ${usuarioEncontrado.apellido}!`);
-    console.log("Login exitoso");
-  } else {
-    alert("Contraseña incorrecta. Inténtelo de nuevo.");
-    console.log("Login fallido por contraseña");
-  }
-} else {
-  alert("Correo no registrado. Inténtelo de nuevo.");
-  console.log("Login fallido por correo");
-}
+    const usuarioEncontrado = listaUsers.find((user) => user.correo === emailInput);
+
+    if (usuarioEncontrado) {
+        if (usuarioEncontrado.contrasena === passwordInput) {
+            alert(`¡Bienvenido, ${usuarioEncontrado.nombre} ${usuarioEncontrado.apellido}!`);
+            console.log("Login exitoso");
+        } else {
+            alert("Contraseña incorrecta. Inténtelo de nuevo.");
+            console.log("Login fallido por contraseña");
+        }
+    } else {
+        alert("Correo no registrado. Inténtelo de nuevo.");
+        console.log("Login fallido por correo");
+    }
+});
