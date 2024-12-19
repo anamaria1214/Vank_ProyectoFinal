@@ -1,46 +1,28 @@
-import { Usuario } from "../model/User.js";
+function getListaUsuarios() {
+  const lista = localStorage.getItem("usuarios");
+  return lista ? JSON.parse(lista) : [];
+}
 
-let listaUsers = [];
-
-const usuario1 = new Usuario(
-    '12345678',
-    'usuario@example.com',
-    'password123',
-    'Juan',
-    'Perez',
-    '3145386174',
-);
-
-const usuario2 = new Usuario(
-    '43587324',
-    'usuario2@example.com',
-    'password1234',
-    'Juancho',
-    'Pereira',
-    '3015517609',
-);
-
-listaUsers.push(usuario1);
-listaUsers.push(usuario2);
+let listaUsers = getListaUsuarios();
 
 const loginButton = document.getElementById("login-button");
 
 loginButton.addEventListener("click", (event) => {
-    const emailInput = document.getElementById("email").value;
-    const passwordInput = document.getElementById("password").value;
+  event.preventDefault();
 
-    const usuarioEncontrado = listaUsers.find((user) => user.correo === emailInput);
+  const emailInput = document.getElementById("email").value;
+  const passwordInput = document.getElementById("password").value;
 
-    if (usuarioEncontrado) {
-        if (usuarioEncontrado.contrasena === passwordInput) {
-            alert(`¡Bienvenido, ${usuarioEncontrado.nombre} ${usuarioEncontrado.apellido}!`);
-            console.log("Login exitoso");
-        } else {
-            alert("Contraseña incorrecta. Inténtelo de nuevo.");
-            console.log("Login fallido por contraseña");
-        }
+  const usuarioEncontrado = listaUsers.find((user) => user.correo === emailInput);
+
+  if (usuarioEncontrado) {
+    if (usuarioEncontrado.contrasena === passwordInput) { 
+        alert(`¡Bienvenido! Hola, ${usuarioEncontrado.nombre} ${usuarioEncontrado.apellido}`);
+        
     } else {
-        alert("Correo no registrado. Inténtelo de nuevo.");
-        console.log("Login fallido por correo");
+        alert("Error: Contraseña incorrecta. Inténtelo de nuevo.");
     }
+  } else {
+    alert("Error: Correo no registrado. Inténtelo de nuevo.");
+  }
 });

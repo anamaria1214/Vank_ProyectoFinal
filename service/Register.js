@@ -1,21 +1,27 @@
-import { Usuario } from "../model/User";
-import { CuentaBancaria } from "../model/Account";
-import { EstadoCuenta } from "../model/enums/EstadoCuenta";
-import { TipoCuenta } from "../model/enums/TipoCuenta";
+import { Usuario } from "../model/User.js";
+// import { CuentaBancaria } from "../model/Account";
+// import { EstadoCuenta } from "../model/enums/EstadoCuenta";
+// import { TipoCuenta } from "../model/enums/TipoCuenta";
 
-let listaUsers = [];
-let cuentas= [];
+function getListaUsuarios() {
+    const lista = localStorage.getItem("usuarios");
+    return lista ? JSON.parse(lista) : []; 
+}
 
-function existeUsuario(correoIngresado){
-    if(listaUsers.find((user) => user.correo === correoIngresado)===undefined){
-        return false;
-    }else{
-        return true;
-    }
+function saveListaUsuarios(lista) {
+    localStorage.setItem("usuarios", JSON.stringify(lista));
+}
+
+let listaUsers = getListaUsuarios();
+
+function existeUsuario(correoIngresado) {
+    return listaUsers.some((user) => user.correo === correoIngresado);
 }
 
 const registroButton = document.getElementById("registro-button");
+
 registroButton.addEventListener("click", (event) => {
+    event.preventDefault(); 
 
     const documento = document.getElementById("documento").value;
     const correoIngresado = document.getElementById("correo").value;
@@ -24,17 +30,21 @@ registroButton.addEventListener("click", (event) => {
     const apellidoIngresado = document.getElementById("apellido").value;
     const telefonoIngresado = document.getElementById("telefono").value;
 
-    const usuario1= new Usuario(documento, correoIngresado, passwordIngresada, nombreIngresado, apellidoIngresado, telefonoIngresado);
+    const usuario1 = new Usuario(
+        documento,
+        correoIngresado,
+        passwordIngresada,
+        nombreIngresado,
+        apellidoIngresado,
+        telefonoIngresado
+    );
 
-    if(!existeUsuario(correoIngresado)){
-        listaUsers.push(usuario1);
-        //Cuando el cliente se registra, se le asigna una cuenta de débito ¿?
-        //const cuenta= new CuentaBancaria(usuario1.telefono, TipoCuenta.Debito, 0, usuario1.documento, EstadoCuenta.Activa);
-        //cuentas.push(cuenta);
+    if (!existeUsuario(correoIngresado)) {
+        listaUsers.push(usuario1); 
+        saveListaUsuarios(listaUsers); 
+        console.log("Usuarios actualizados:", listaUsers);
         alert("Registro exitoso");
-    }else{
+    } else {
         alert("Registro fallido. Usuario ya existente");
     }
-
 });
-
