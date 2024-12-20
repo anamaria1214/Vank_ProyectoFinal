@@ -58,5 +58,6 @@ registroButton.addEventListener("click", (event) => {
         } else {
             alert("Registro fallido. Usuario ya existente");
         }
+        
     }
 });
