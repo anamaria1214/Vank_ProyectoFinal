@@ -1,0 +1,83 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilo del body */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: rgb(248, 248, 16);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Main */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Formulario */
+.form-cuenta {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+.form-cuenta label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-cuenta input,
+.form-cuenta select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.form-cuenta button {
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(248, 248, 16);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+.form-cuenta button:hover {
+    background-color: rgb(248, 248, 16);
+}
+
+/* Footer */
+footer {
+    background-color: rgb(248, 248, 16);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: auto;
+}
