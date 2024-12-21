@@ -1,121 +1,232 @@
 /* Reset básico */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* Contenedor principal */
 .background-container {
-    position: relative;
-    height: 100vh;
-    background: url('../img/fondo\ monedas.jpg') no-repeat center center/cover;
-    color: white;
-    text-align: center;
-    overflow: hidden;
+  position: relative;
+  height: 100vh;
+  background: url('../img/fondo\ monedas.jpg') no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  overflow: hidden;
 }
 
 /* Menú flotante */
 .navbar {
-    position: absolute;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90%;
-    max-width: 1100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 30px;
-    background-color: rgb(255, 255, 255);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 12px;
-    z-index: 10;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 1100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  z-index: 10;
 }
 
 .navbar img {
-    height: 50px;
+  height: 50px;
 }
 
 .navbar .button {
-    background-color: #ffef0a;
-    color: rgb(0, 0, 0);
-    padding: 8px 15px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
+  background-color: #ffef0a;
+  color: rgb(0, 0, 0);
+  padding: 8px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
 }
 
 /* Contenido centrado */
 .content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    background: rgba(0, 0, 0, 0.205); /* Fondo oscuro translúcido */
-    padding: 20px;
-    border-radius: 10px;
-    width: 90%;
-    max-width: 800px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background: rgba(0, 0, 0, 0.205); /* Fondo oscuro translúcido */
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 800px;
 }
 
 .content h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Sombra para resaltar */
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Sombra para resaltar */
 }
 
 .content p {
-    font-size: 1.1em;
-    margin-bottom: 20px;
-    color: white;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  font-size: 1.1em;
+  margin-bottom: 20px;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
 
 .content .register-button {
-    background-color: #dfad25;
-    color: rgb(0, 0, 0);
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  background-color: #ffef0a;
+  color: rgb(0, 0, 0);
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-
 .section {
-    display: flex;
-    justify-content: space-between; 
-    align-items: center;
-    padding: 40px 60px; 
-    background-color: #F5F5F5;
-    margin-top: 20px;
-    max-width: 1200px; 
-    margin-left: auto; 
-    margin-right: auto;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  padding: 40px 60px; 
+  background-color: #F5F5F5;
+  margin-top: 20px;
+  max-width: 1200px; 
+  margin-left: auto; 
+  margin-right: auto;
 }
 
 .section .text {
-    flex: 1;
-    max-width: 40%; 
-    font-size: 1.1em;
-    line-height: 1.4; 
-    color: #333;
-    margin-right: 20px; 
+  flex: 1;
+  max-width: 40%; 
+  font-size: 1.1em;
+  line-height: 1.4; 
+  color: #333;
+  margin-right: 20px; 
 }
 
 .section .image {
-    flex: 1;
-    max-width: 40%; 
-    display: flex;
-    justify-content: center;
+  flex: 1;
+  max-width: 40%; 
+  display: flex;
+  justify-content: center;
 }
 
 .section .image img {
-    width: 100%; 
-    max-width: 400px; 
-    border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%; 
+  max-width: 400px; 
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Botón flotante */
+#botonFlotante {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  background-color: #ffef0a;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Chatbox */
+#chatbox {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  width: 350px; /* Más ancho */
+  max-height: 500px; /* Más alto */
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+/* Cuerpo del Chatbox */
+#chatboxBody {
+  padding: 10px;
+  flex: 1;
+  overflow-y: auto;
+  font-size: 14px;
+  height: 400px;
+  display: flex;
+  flex-direction: column; /* Apilar mensajes */
+  gap: 10px; /* Espacio entre mensajes */
+}
+
+/* Mensajes del usuario */
+.user-message {
+  align-self: flex-end;
+  background-color: #d1e7dd; /* Verde claro */
+  color: #0f5132; /* Texto oscuro */
+  padding: 8px 12px;
+  border-radius: 15px;
+  max-width: 70%;
+  word-wrap: break-word; /* Permite saltos de línea */
+}
+
+/* Mensajes del bot */
+.bot-message {
+  align-self: flex-start;
+  background-color: #f8d7da; /* Rojo claro */
+  color: #842029; /* Texto oscuro */
+  padding: 8px 12px;
+  border-radius: 15px;
+  max-width: 70%;
+  word-wrap: break-word;
+}
+
+/* Footer del Chatbox */
+#chatboxFooter {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+  background-color: #f9f9f9;
+}
+
+/* Estilo del input */
+#chatboxFooter input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+#chatboxFooter input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Estilo del botón */
+#chatboxFooter button {
+  margin-left: 10px;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#chatboxFooter button:hover {
+  background-color: #0056b3;
 }

@@ -48,8 +48,8 @@
 .login-form button {
     width: 100%;
     padding: 10px;
-    background-color: #007BFF;
-    color: white;
+    background-color: #ffef0a;
+    color: rgb(0, 0, 0);
     border: none;
     border-radius: 5px;
     font-size: 1.1em;
@@ -57,7 +57,7 @@
 }
 
 .login-form button:hover {
-    background-color: #0056b3;
+    background-color: #dfd005;
 }
 
 .login-form a {
@@ -86,4 +86,27 @@
     max-width: 400px;
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Botón de volver */
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    background-color: #ffef0a;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.back-button:hover {
+    background-color: #dfd005;
+}
+
+.back-button:active {
+    transform: scale(0.95);
 }

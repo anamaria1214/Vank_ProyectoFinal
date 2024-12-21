@@ -29,5 +29,20 @@
             <img src="./img/banquero.jpg" alt="Imagen">
         </div>
     </div>
+
+    <button id="botonFlotante" onclick="toggleChatbox()">💬</button>
+    
+    <div id="chatbox" style="display: none;">
+      <div id="chatboxBody"></div>
+      <div id="chatboxFooter">
+        <input id="userInput" type="text" placeholder="Escribe un mensaje...">
+        <button onclick="enviarMensaje()">Enviar</button>
+      </div>
+    </div>
+    
+  
+
+    <script src="../service/chatBox.js"></script>
+  </div>
 </body>
 </html>
