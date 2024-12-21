@@ -1,8 +1,6 @@
 import { Usuario } from "../model/User.js";
-// import { CuentaBancaria } from "../model/Account";
-// import { EstadoCuenta } from "../model/enums/EstadoCuenta";
-// import { TipoCuenta } from "../model/enums/TipoCuenta";
 
+// Obtener la lista de usuarios guardados en el localStorage
 function getListaUsuarios() {
     const lista = localStorage.getItem("usuarios");
     return lista ? JSON.parse(lista) : []; 
@@ -14,8 +12,12 @@ function saveListaUsuarios(lista) {
 
 let listaUsers = getListaUsuarios();
 
-function existeUsuario(correoIngresado) {
-    return listaUsers.some((user) => user.correo === correoIngresado);
+function existeUsuario(documentoIngresado, correoIngresado) {
+    return listaUsers.some((user) => user.documento === documentoIngresado || user.correo === correoIngresado);
+}
+
+function contraseñasCoinciden(password, confirmarPassword) {
+    return password === confirmarPassword;
 }
 
 const registroButton = document.getElementById("registro-button");
@@ -29,22 +31,21 @@ registroButton.addEventListener("click", (event) => {
     const nombreIngresado = document.getElementById("nombre").value;
     const apellidoIngresado = document.getElementById("apellido").value;
     const telefonoIngresado = document.getElementById("telefono").value;
+    const confirmarPassword = document.getElementById("confirm-password").value;
 
-    const usuario1 = new Usuario(
-        documento,
-        correoIngresado,
-        passwordIngresada,
-        nombreIngresado,
-        apellidoIngresado,
-        telefonoIngresado
-    );
-
-    if (!existeUsuario(correoIngresado)) {
-        listaUsers.push(usuario1); 
-        saveListaUsuarios(listaUsers); 
-        console.log("Usuarios actualizados:", listaUsers);
-        alert("Registro exitoso");
-    } else {
-        alert("Registro fallido. Usuario ya existente");
+    if (existeUsuario(documento, correoIngresado)) {
+        alert("Registro fallido. Ya existe un usuario con ese documento o correo.");
+        return; 
     }
+
+    if (!contraseñasCoinciden(passwordIngresada, confirmarPassword)) {
+        alert("Las contraseñas no coinciden.");
+        return;
+    }
+
+    const nuevoUsuario = new Usuario(documento, correoIngresado, passwordIngresada, nombreIngresado, apellidoIngresado, telefonoIngresado);
+    
+    listaUsers.push(nuevoUsuario);
+    saveListaUsuarios(listaUsers);
+    alert("Registro exitoso");
 });

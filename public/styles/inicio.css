@@ -1,11 +1,9 @@
-/* Reset básico */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Contenedor principal */
 .background-container {
   position: relative;
   height: 100vh;
@@ -15,7 +13,6 @@
   overflow: hidden;
 }
 
-/* Menú flotante */
 .navbar {
   position: absolute;
   top: 20px;
@@ -46,14 +43,13 @@
   font-weight: bold;
 }
 
-/* Contenido centrado */
 .content {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  background: rgba(0, 0, 0, 0.205); /* Fondo oscuro translúcido */
+  background: rgba(0, 0, 0, 0.205); 
   padding: 20px;
   border-radius: 10px;
   width: 90%;
@@ -64,7 +60,7 @@
   font-size: 2.5em;
   margin-bottom: 10px;
   color: white;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Sombra para resaltar */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); 
 }
 
 .content p {
@@ -83,7 +79,6 @@
   font-weight: bold;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
-
 .section {
   display: flex;
   justify-content: space-between; 
@@ -113,13 +108,120 @@
 }
 
 .section .image img {
-  width: 100%; 
-  max-width: 400px; 
-  border-radius: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%; 
+    max-width: 400px; 
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.card-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 20px;
+    background-color: #f8f9fa;
+    gap: 20px;
 }
 
-/* Botón flotante */
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card h3 {
+    font-size: 1.5em;
+    margin: 15px 0 10px;
+    color: #333;
+    text-align: center;
+}
+
+.card p {
+    font-size: 1em;
+    color: #555;
+    padding: 0 15px 20px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.footer {
+    background-color: #333;
+    color: #f8f9fa;
+    padding: 20px 10%;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-section h4 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #f8f9fa;
+    text-transform: uppercase;
+}
+
+.footer-section p {
+    font-size: 0.9em;
+    line-height: 1.6;
+    color: #d1d1d1;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #d1d1d1;
+    font-size: 0.9em;
+}
+
+.footer-section ul li a:hover {
+    color: #007bff;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+    font-size: 0.8em;
+    color: #999;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 #botonFlotante {
   position: fixed;
   bottom: 20px;
@@ -139,13 +241,12 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Chatbox */
 #chatbox {
   position: fixed;
   bottom: 90px;
   right: 20px;
-  width: 350px; /* Más ancho */
-  max-height: 500px; /* Más alto */
+  width: 350px; 
+  max-height: 500px; 
   background-color: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
@@ -155,7 +256,6 @@
   z-index: 1000;
 }
 
-/* Cuerpo del Chatbox */
 #chatboxBody {
   padding: 10px;
   flex: 1;
@@ -163,33 +263,30 @@
   font-size: 14px;
   height: 400px;
   display: flex;
-  flex-direction: column; /* Apilar mensajes */
-  gap: 10px; /* Espacio entre mensajes */
+  flex-direction: column; 
+  gap: 10px; 
 }
 
-/* Mensajes del usuario */
 .user-message {
   align-self: flex-end;
-  background-color: #d1e7dd; /* Verde claro */
-  color: #0f5132; /* Texto oscuro */
+  background-color: #d1e7dd; 
+  color: #0f5132; 
   padding: 8px 12px;
   border-radius: 15px;
   max-width: 70%;
-  word-wrap: break-word; /* Permite saltos de línea */
+  word-wrap: break-word; 
 }
 
-/* Mensajes del bot */
 .bot-message {
   align-self: flex-start;
-  background-color: #f8d7da; /* Rojo claro */
-  color: #842029; /* Texto oscuro */
+  background-color: #f8d7da; 
+  color: #842029; 
   padding: 8px 12px;
   border-radius: 15px;
   max-width: 70%;
   word-wrap: break-word;
 }
 
-/* Footer del Chatbox */
 #chatboxFooter {
   display: flex;
   padding: 10px;
@@ -197,7 +294,6 @@
   background-color: #f9f9f9;
 }
 
-/* Estilo del input */
 #chatboxFooter input {
   flex: 1;
   padding: 10px;
@@ -213,7 +309,6 @@
   box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
-/* Estilo del botón */
 #chatboxFooter button {
   margin-left: 10px;
   padding: 10px 15px;

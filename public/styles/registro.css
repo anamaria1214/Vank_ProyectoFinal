@@ -1,4 +1,3 @@
-/* Reset básico */
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +5,6 @@
     font-family: Arial, sans-serif;
 }
 
-/* Contenedor principal */
 .container {
     display: flex;
     justify-content: space-between;
@@ -16,7 +14,6 @@
     background-color: #F5F5F5;
 }
 
-/* Imagen flotante */
 .image-container {
     flex: 1;
     display: flex;
@@ -31,7 +28,6 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Formulario de registro */
 .register-form {
     flex: 1;
     max-width: 40%;
@@ -90,17 +86,17 @@
 
 .contrasenias {
     display: flex;
-    align-items: center; /* Alinea verticalmente el contenido */
-    justify-content: space-between; /* Espacia uniformemente los elementos */
-    gap: 10px; /* Espaciado entre cada elemento */
+    align-items: center; 
+    justify-content: space-between; 
+    gap: 10px; 
 }
 
 .contrasenias label {
-    margin-right: 5px; /* Separación entre el label y su input */
+    margin-right: 5px; 
 }
 
 .contrasenias input {
-    flex: 1; /* Hace que los inputs ocupen espacio proporcional */
+    flex: 1; 
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -110,7 +106,6 @@
     align-items: center;
 }
 
-/* Botón de volver */
 .back-button {
     position: absolute;
     top: 20px;

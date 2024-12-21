@@ -1,5 +1,5 @@
 
-class CuentaBancaria {
+export class CuentaBancaria {
     constructor(numeroCuenta, tipoCuenta, saldo, documentoUsuario, estado) {
       this.numeroCuenta = numeroCuenta;  
       this.tipoCuenta = tipoCuenta;      

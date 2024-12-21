@@ -1,5 +1,5 @@
 export class Usuario {
-    constructor(documento, correo, contrasena, nombre, apellido, direccion, telefono) {
+    constructor(documento, correo, contrasena, nombre, apellido, telefono) {
       this.documento = documento;
       this.correo = correo;
       this.contrasena = contrasena;

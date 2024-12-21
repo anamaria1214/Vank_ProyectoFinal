@@ -1,5 +1,5 @@
 export class TipoCuenta {
-    static Debito = "debito";
+    static Ahorros = "ahorros";
     static Corriente = "corriente";
     static Nomina = "nomina";
 }

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/principal.css">
+    <title>Cuentas Bancarias</title>
+</head>
+<body>
+    <div class="navbar">
+        <img src="./img/vank.png" alt="Logo" />
+        <div class="navbar-buttons">
+            <button onclick="location.href='./crearCuenta.html'">Nueva Cuenta</button>
+            <button onclick="location.href='./inicio.html'">Cerrar Sesión</button>
+        </div>
+    </div>
+
+    <div class="cards-container" id="cards-container">
+    </div>
+
+    <button id="botonFlotante" onclick="toggleChatbox()">💬</button>
+    
+    <div id="chatbox" style="display: none;">
+      <div id="chatboxBody"></div>
+      <div id="chatboxFooter">
+        <input id="userInput" type="text" placeholder="Escribe un mensaje...">
+        <button onclick="enviarMensaje()">Enviar</button>
+      </div>
+    </div>
+    
+    <script src="../service/chatBox.js"></script>
+    <script src="../service/GestionCuentas.js"></script>
+</body>
+</html>
